@@ -1,0 +1,81 @@
+//ANSWER 1
+var arr= [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12];
+
+for(var i=0; i<=arr.length; i++){
+ if(arr[i]%2==0){
+ console.log(arr[i]);
+ }
+}
+
+//ANSWER 3
+function repeatedNumber(){
+   var arr1=[0, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 10];
+    for(var i=0; i<=arr1.length; i++){
+         for(var j=0; j<=arr1.length; j++){
+             if(arr1[i]==arr1[j]){
+             console.log("Duplicate Number:" +arr1[i]);
+             }         
+         }   
+    }
+}
+repeatedNumber();
+
+//ANSWER 4
+var x = document.form["myForm"]["fname"].value;
+if(x==""){
+alert("Name must be filled out");
+return false;
+}
+var y = document.forms["myForm"]["checkbox"].checked
+if(y== false)
+{
+alert("Checkbox not checked")
+return false;
+}
+
+<!-- ANSWER 5 -->
+<html>
+<head>
+<style>
+ div{
+ border: solid black;
+ border-radius; 50px;
+ padding: 5px
+ }
+ </style>
+ 
+</head>
+<body>
+<div>Javascript Developer</div>
+</body>
+</html>
+
+<!-- ANSWER 6 -->
+<html>
+<head>
+<style>
+div{
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  margin; 0 auto 0;
+}
+</style>
+
+</head>
+<body>
+<div>
+
+</div>
+
+</body>
+</html>
+
+//ANSWER 7
+$.ajax({
+type: "GET",
+url: "www.example.com/api/get/1",
+success; function function(data){
+console.log(data)
+}
+});
