@@ -7,12 +7,29 @@ for(var i=0; i<=arr.length; i++){
  }
 }
 
+//ANSWER 2
+var maxconsec= function(arr){
+let maxcount=0;
+let count=0;
+for(var i=0; i<=arr.length; i++){
+if(arr[i]==0){
+count=0;
+}
+else{
+maxcount++;
+}
+if(count>maxcount){
+maxcount=count
+}
+return maxcount;
+}
+
 //ANSWER 3
 function repeatedNumber(){
    var arr1=[0, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 10];
     for(var i=0; i<=arr1.length; i++){
          for(var j=0; j<=arr1.length; j++){
-             if(arr1[i]==arr1[j]){
+             if(arr1[i]===arr1[j]){
              console.log("Duplicate Number:" +arr1[i]);
              }         
          }   
@@ -79,3 +96,14 @@ success; function function(data){
 console.log(data)
 }
 });
+
+//ANSWER 8
+var obj={
+"id" : 4, "name" : "abc",
+"id" : 10, "name" : "abc2",
+"id" : 5, "name" : "abc3",
+"id" : 6, "name" : "abc5",
+}
+obj.sort(function(a,b)){
+return a.id-b.id;
+}
