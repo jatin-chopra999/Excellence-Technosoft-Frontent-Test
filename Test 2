@@ -1,0 +1,57 @@
+import { Component, OnInit } from '@angular/core';
+
+import { HttpClient } from '@angular/common/http';
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+
+  
+constructor(private http:HttpClient){}
+works;
+displayPhotos(){
+  this.http.get ("https://jsonplaceholder.typicode.com/photos").subscribe(res=>{
+  this.works=res
+  console.log(res)
+  })
+}
+
+
+ngOnInit(){
+  this.displayPhotos()
+  
+}
+data(ele){
+ console.log(ele)
+}
+
+}
+
+
+//HTML CODE
+
+<html>
+    <head>
+        <style>
+            button{
+    position: absolute;
+  left: 133px
+}
+        </style>
+
+    </head>
+    <body>
+        <div *ngFor="let work of works | slice :0:9 ;index as i">
+    
+            <img src="{{work.thumbnailUrl}}" >
+            <!-- <input type="button" value="*" click="data(i)"> -->
+            <button (click)="data(i)">X</button>
+          
+      
+        </div>
+    </body>
+</html>
